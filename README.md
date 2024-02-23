@@ -1,4 +1,5 @@
-### Device specific configuration to build AOSP Android 13 for Raspberry Pi 4.
+### Device specific configuration to build Automotive AOSP Android 14 for Raspberry Pi 4 and Raspberry Pi 5.
+Based on: https://github.com/raspberry-vanilla/android_local_manifest
 
 ***
 
@@ -16,16 +17,8 @@ sudo pip3 install meson mako jinja2 ply pyyaml
 3. Initialize repo:
 
 ```
-repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r75 --depth=1
-git clone https://github.com/Samaelson/aaos_local_manifest.git -b android-13.0_1024x600 .repo/local_manifests
-```
-
-Or optionally, you can reduce download size by creating a shallow clone and removing unneeded projects:
-
-```
-repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r75 --depth=1
-curl -o .repo/local_manifests/manifest_brcm_rpi4.xml -L https://raw.githubusercontent.com/Samaelson/aaos_local_manifest/android-13.0_1024x600/manifest_brcm_rpi4.xml --create-dirs
-curl -o .repo/local_manifests/remove_projects.xml -L https://raw.githubusercontent.com/Samaelson/aaos_local_manifest/android-13.0_1024x600/remove_projects.xml
+repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r22 --depth=1
+git clone https://github.com/Samaelson/aaos_local_manifest.git -b android-14.0 .repo/local_manifests
 ```
 
 4. Sync source code:
@@ -33,6 +26,12 @@ curl -o .repo/local_manifests/remove_projects.xml -L https://raw.githubuserconte
 ```
 repo sync
 ```
+
+***
+
+### Compile and build RPi4:
+
+***
 
 5. Compile:
 
@@ -48,7 +47,35 @@ make bootimage systemimage vendorimage
 ./rpi4-mkimg.sh
 ```
 
-Also look into [Linux kernel build instructions](https://github.com/raspberry-vanilla/android_kernel_manifest/tree/android-13.0).
+***
+
+### Compile and build RPi5: Still under development - disabled in manifest file for now!
+
+***
+
+5. Compile:
+
+```
+. build/envsetup.sh
+lunch aosp_rpi5-userdebug
+make bootimage systemimage vendorimage
+```
+
+In case of error  --> "-bash: build/soong/soong_ui.bash: Permission denied" <-- simply set permissions:
+
+```
+chmod -R 777 build
+```
+
+6. Make flashable image:
+
+```
+./rpi5-mkimg.sh
+```
+
+***
+
+Also look into [Linux kernel build instructions](https://github.com/raspberry-vanilla/android_kernel_manifest/tree/android-14.0).
 
 ***
 
