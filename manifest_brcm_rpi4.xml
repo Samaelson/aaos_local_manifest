@@ -3,7 +3,7 @@
   <remote name="github" fetch="https://github.com/" />
 
   <!-- Raspberry Pi -->
-  <project path="device/brcm/rpi4" name="grapeup/aaos_device_brcm_rpi4" remote="github" revision="android-13.0" >
+  <project path="device/brcm/rpi4" name="Samaelson/aaos_device_brcm_rpi4" remote="github" revision="android-13.0_1024x600" >
     <linkfile src="mkimg.sh" dest="rpi4-mkimg.sh" />
   </project>
     <project path="device/brcm/rpi4-kernel" name="raspberry-vanilla/android_device_brcm_rpi4-kernel" remote="github" revision="android-13.0" />
