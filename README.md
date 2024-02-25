@@ -38,7 +38,7 @@ repo sync
 ```
 . build/envsetup.sh
 lunch aosp_rpi4_car-userdebug
-make bootimage systemimage vendorimage
+make bootimage systemimage vendorimage -j$(nproc)
 ```
 
 6. Make flashable image:
