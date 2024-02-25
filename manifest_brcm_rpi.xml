@@ -17,6 +17,10 @@
   <project path="external/alsa-lib" name="raspberry-vanilla/android_external_alsa-lib" remote="github" revision="android-14.0" />
   <project path="external/alsa-utils" name="raspberry-vanilla/android_external_alsa-utils" remote="github" revision="android-14.0" />
 
+  <!-- Automotive -->
+  <project path="device/brcm/rpi4-car" name="Samaelson/aaos_device_brcm_rpi4_car" remote="github" revision="android-14.0" />
+  <project path="packages/apps/Car/AOSPHost" name="Samaelson/aaos_car_aosp_host" remote="github" revision="android-14.0" />
+  
   <!-- Build -->
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
