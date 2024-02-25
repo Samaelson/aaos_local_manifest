@@ -58,7 +58,7 @@ make bootimage systemimage vendorimage -j$(nproc)
 ```
 . build/envsetup.sh
 lunch aosp_rpi5-userdebug
-make bootimage systemimage vendorimage
+make bootimage systemimage vendorimage -j$(nproc)
 ```
 
 In case of error  --> "-bash: build/soong/soong_ui.bash: Permission denied" <-- simply set permissions:
