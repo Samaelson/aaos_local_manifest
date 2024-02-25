@@ -3,37 +3,24 @@
   <remote name="github" fetch="https://github.com/" />
 
   <!-- Raspberry Pi -->
-  <!--project path="device/brcm/rpi4" name="Samaelson/aaos_device_brcm_rpi4" remote="github" revision="android-14.0" -->
   <project path="device/brcm/rpi4" name="raspberry-vanilla/android_device_brcm_rpi4" remote="github" revision="android-14.0" >
     <linkfile src="mkimg.sh" dest="rpi4-mkimg.sh" />
   </project>
-  <!--project path="device/brcm/rpi5" name="Samaelson/aaos_device_brcm_rpi5" remote="github" revision="android-14.0" >
+  <project path="device/brcm/rpi5" name="raspberry-vanilla/android_device_brcm_rpi5" remote="github" revision="android-14.0" >
     <linkfile src="mkimg.sh" dest="rpi5-mkimg.sh" />
-  </project-->
+  </project>
   <project path="device/brcm/rpi4-kernel" name="raspberry-vanilla/android_device_brcm_rpi4-kernel" remote="github" revision="android-14.0" />
-  <!--project path="device/brcm/rpi5-kernel" name="raspberry-vanilla/android_device_brcm_rpi5-kernel" remote="github" revision="android-14.0" /-->
+  <project path="device/brcm/rpi5-kernel" name="raspberry-vanilla/android_device_brcm_rpi5-kernel" remote="github" revision="android-14.0" />
   <project path="vendor/brcm" name="raspberry-vanilla/proprietary_vendor_brcm" remote="github" revision="android-14.0" />
-
-  <!-- Automotive -->
-  <project path="device/brcm/rpi4-car" name="Samaelson/aaos_device_brcm_rpi4_car" remote="github" revision="android-14.0" />
-  <project path="packages/apps/Car/AOSPHost" name="Samaelson/aaos_car_aosp_host" remote="github" revision="android-14.0" />
 
   <!-- Audio -->
   <project path="external/alsa-lib" name="raspberry-vanilla/android_external_alsa-lib" remote="github" revision="android-14.0" />
   <project path="external/alsa-utils" name="raspberry-vanilla/android_external_alsa-utils" remote="github" revision="android-14.0" />
 
-  <!-- Bluetooth -->
-  <remove-project name="platform/hardware/interfaces" />
-  <project path="hardware/interfaces" name="Samaelson/aaos_hardware_interfaces" remote="github" revision="android-14.0" />
-  <remove-project name="platform/packages/modules/Bluetooth" />
-  <project path="packages/modules/Bluetooth" name="Samaelson/aaos_packages_modules_bluetooth" remote="github" revision="android-14.0" />
-  
-
   <!-- Build -->
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
   <project path="build/make" name="raspberry-vanilla/android_build" remote="github" revision="android-14.0" >
-  <!--project path="build/make" name="Samaelson/android_build" remote="github" revision="android-14.0" -->
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -42,7 +29,6 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <project path="build/soong" name="raspberry-vanilla/android_build_soong" remote="github" revision="android-14.0" >
-  <!--project path="build/soong" name="Samaelson/android_build_soong" remote="github" revision="android-14.0" --> 
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -78,6 +64,5 @@
   <remove-project name="platform/packages/modules/Wifi" />
   <project path="external/wpa_supplicant_8" name="raspberry-vanilla/android_external_wpa_supplicant_8" remote="github" revision="android-14.0" />
   <project path="packages/modules/Wifi" name="raspberry-vanilla/android_packages_modules_Wifi" remote="github" revision="android-14.0" />
-
 
 </manifest>
