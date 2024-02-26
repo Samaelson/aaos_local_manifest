@@ -3,10 +3,10 @@
   <remote name="github" fetch="https://github.com/" />
 
   <!-- Raspberry Pi -->
-  <project path="device/brcm/rpi4" name="raspberry-vanilla/android_device_brcm_rpi4" remote="github" revision="android-14.0" >
+  <project path="device/brcm/rpi4" name="Samaelson/android_device_brcm_rpi4" remote="github" revision="android-14.0" >
     <linkfile src="mkimg.sh" dest="rpi4-mkimg.sh" />
   </project>
-  <project path="device/brcm/rpi5" name="raspberry-vanilla/android_device_brcm_rpi5" remote="github" revision="android-14.0" >
+  <project path="device/brcm/rpi5" name="Samaelson/android_device_brcm_rpi5" remote="github" revision="android-14.0" >
     <linkfile src="mkimg.sh" dest="rpi5-mkimg.sh" />
   </project>
   <project path="device/brcm/rpi4-kernel" name="raspberry-vanilla/android_device_brcm_rpi4-kernel" remote="github" revision="android-14.0" />
@@ -18,7 +18,7 @@
   <project path="external/alsa-utils" name="raspberry-vanilla/android_external_alsa-utils" remote="github" revision="android-14.0" />
 
   <!-- Automotive -->
-  <project path="device/brcm/rpi4-car" name="Samaelson/aaos_device_brcm_rpi4_car" remote="github" revision="android-14.0" />
+  <project path="device/brcm/rpi-car" name="Samaelson/aaos_device_brcm_rpi_car" remote="github" revision="android-14.0" />
   <project path="packages/apps/Car/AOSPHost" name="Samaelson/aaos_car_aosp_host" remote="github" revision="android-14.0" />
   
   <!-- Build -->
