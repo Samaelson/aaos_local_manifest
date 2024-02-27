@@ -67,7 +67,7 @@ make bootimage systemimage vendorimage -j$(nproc)
 If you get a permisssion denied error, just set permissions:
 
 ```
-sudo chmod -R 777 /device/bcrm
+sudo chmod -R 755 /device/bcrm
 ```
 
 Also look into [Linux kernel build instructions](https://github.com/raspberry-vanilla/android_kernel_manifest/tree/android-14.0).
