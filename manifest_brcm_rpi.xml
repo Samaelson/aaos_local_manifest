@@ -20,6 +20,10 @@
   <!-- Automotive -->
   <project path="device/brcm/rpi-car" name="Samaelson/aaos_device_brcm_rpi_car" remote="github" revision="android-14.0" />
   <project path="packages/apps/Car/AOSPHost" name="Samaelson/aaos_car_aosp_host" remote="github" revision="android-14.0" />
+
+  <!-- Applications -->
+  <!--project path="packages/apps/Car/CarDABZ" name="Samaelson/aaos_car_dab_z" remote="github" revision="android-14.0" /-->
+  <!--project path="packages/apps/Car/SygicNavigation" name="Samaelson/aaos_navi_sygic" remote="github" revision="android-14.0" /-->
   
   <!-- Build -->
   <remove-project name="platform/build" />
